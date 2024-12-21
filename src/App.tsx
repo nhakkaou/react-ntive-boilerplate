@@ -1,5 +1,6 @@
 import 'react-native-gesture-handler';
 
+import { ThemeProvider } from '@shopify/restyle';
 import { Provider as JotaiProvider } from 'jotai';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { MMKV } from 'react-native-mmkv';
@@ -9,7 +10,9 @@ import ApplicationNavigator from '@/navigation/Application';
 
 import '@/translations';
 
-export const queryClient = new QueryClient({ 
+import theme from './theme/theme';
+
+export const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       keepPreviousData: true,
@@ -23,12 +26,15 @@ export const queryClient = new QueryClient({
 export const storage = new MMKV();
 
 function App() {
+  
   return (
     <GestureHandlerRootView>
       <QueryClientProvider client={queryClient}>
-        <JotaiProvider>
-          <ApplicationNavigator />
-        </JotaiProvider>
+        <ThemeProvider theme={theme}>
+          <JotaiProvider>
+            <ApplicationNavigator />
+          </JotaiProvider>
+        </ThemeProvider>
       </QueryClientProvider>
     </GestureHandlerRootView>
   );

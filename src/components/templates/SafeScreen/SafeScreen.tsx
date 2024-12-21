@@ -1,9 +1,7 @@
 import type { PropsWithChildren } from 'react';
 import type { SafeAreaViewProps } from 'react-native-safe-area-context';
-
 import { StatusBar } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-
 import { DefaultError } from '@/components/molecules';
 import { ErrorBoundary } from '@/components/organisms';
 
@@ -22,7 +20,7 @@ function SafeScreen({
   ...props
 }: Props) {
   return (
-    <SafeAreaView {...props} mode="padding">
+    <SafeAreaView {...props} mode="padding" style={{flex: 1}}>
       <StatusBar />
       <ErrorBoundary onReset={onResetError}>
         {isError ? <DefaultError onReset={onResetError} /> : children}
