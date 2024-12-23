@@ -8,9 +8,11 @@ import { Paths } from '@/navigation/paths';
 
 import { Startup } from '@/screens';
 
+
 const Stack = createStackNavigator<RootStackParamList>();
 
 function ApplicationNavigator() {
+  
   return (
     <SafeAreaProvider>
       <NavigationContainer>

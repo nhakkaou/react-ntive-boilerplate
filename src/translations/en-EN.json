@@ -1,14 +1,14 @@
 {
   "myapp": {
     "common_appName": {
-      "full": "React Native MyApp",
+      "full": "React native Boilerplate",
       "initials": "RNB"
     },
     "common_error": "Oops! Something went wrong.",
     "screen_example": {
-      "hello_user": "Hi, my name is {{name}}",
+      "hello_user": "Hi, my name is Noreddine",
       "title": "Welcome on The $t(common_appName.full)",
-      "description": "Do you want to discover some features? Just click on one of the three buttons at the bottom of the screen. The first allows you to call a REST API. The second lets you change the theme color. And the third allows you to change the language."
+      "description": "If you like this boilerplate or you have any suggestion dont hesitate to contact me. 😁"
     },
     "error_boundary": {
       "title": "Oops! Something went wrong.",

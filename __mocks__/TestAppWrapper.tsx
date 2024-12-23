@@ -1,18 +1,18 @@
-import { QueryClientProvider } from '@tanstack/react-query';
 import { type PropsWithChildren } from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
-import { ThemeProvider } from '@/theme';
-
 import '@/translations';
 
-import { queryClient, storage } from '@/App';
+import { queryClient } from '@/App';
+import { QueryClientProvider } from 'react-query';
+import { ThemeProvider } from '@shopify/restyle';
+import theme from '@/theme/theme';
 
 function TestAppWrapper({ children }: PropsWithChildren) {
   return (
     <GestureHandlerRootView>
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider storage={storage}>{children}</ThemeProvider>
+        <ThemeProvider theme={theme}>{children}</ThemeProvider>
       </QueryClientProvider>
     </GestureHandlerRootView>
   );

@@ -1,5 +1,6 @@
 import {createTheme} from '@shopify/restyle';
 import { colors } from './colors';
+import { textVariants } from './textVarinats';
 
 const theme = createTheme({
   colors: {
@@ -7,6 +8,7 @@ const theme = createTheme({
     mainForeground: colors.black,
     cardPrimaryBackground: colors.purplePrimary,
     buttonPrimaryBackground: colors.purplePrimary,
+    black: colors.black
   },
   spacing: {
     s: 8,
@@ -14,19 +16,7 @@ const theme = createTheme({
     l: 24,
     xl: 40,
   },
-  textVariants: {
-    header: {
-      fontWeight: 'bold',
-      fontSize: 34,
-    },
-    body: {
-      fontSize: 16,
-      lineHeight: 24,
-    },
-    defaults: {
-      // We can define a default text variant here.
-    },
-  },
+  textVariants
 });
 
 export type Theme = typeof theme;
